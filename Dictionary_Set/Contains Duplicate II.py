@@ -1,7 +1,16 @@
+# Contain Duplicate I
+class Solution:
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        return len(set(nums)) < len(nums)
+
+# Contain Duplicate II
 # Wrong Answer
 # Time Limit Exceeded
 # O(n^2)
-
 class Solution:
     def containsNearbyDuplicate(self, nums, k):
         """
@@ -23,12 +32,9 @@ class Solution:
                         tmp.pop(0)
                     tmp.append(nums[i])
         return False
-            
-                         
-#########################################################################
+
 # Using Dictionary
 # O(n)
-
 class Solution:
     def containsNearbyDuplicate(self, nums, k):
         """
@@ -43,3 +49,6 @@ class Solution:
                     return True
             tmp[num] = i
         return False
+
+
+# Contain Duplicate III
